@@ -1,0 +1,16 @@
+<h1>Tic Tac Toe</h1>
+
+<div class="board">
+  <div 
+    *ngFor="let cell of board; let i = index" 
+    (click)="makeMove(i)"
+    class="cell">
+    {{ cell }}
+  </div>
+</div>
+
+<p *ngIf="winner">🎉 {{ winner }} wins!</p>
+<button (click)="resetGame()">Restart</button>
+
+
+<router-outlet />
